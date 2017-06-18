@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="INSTALLDIR">
+            <Component Id="cmp370F0A754FB44AE2F9063D9D0098D5FC" Guid="*">
+                <File Id="fil8D6199E5982EDCC547561C81419CE966" KeyPath="yes" Source="$(var.AppProjectDir)\DRG.ConsoleApplication.exe" />
+            </Component>
+            <Component Id="cmp364868FE3B4245B8EBE4C3511C86F0FA" Guid="*">
+                <File Id="fil8C4D08126A4BB1EE65B3798AD9CD8ADA" KeyPath="yes" Source="$(var.AppProjectDir)\DRG.ConsoleApplication.exe.config" />
+            </Component>
+            
+            <Component Id="cmp8048AEC798671FB7AEE279D1DB9B883C" Guid="*">
+                <File Id="fil7CA1ABB5F458E4A19A4289448A2243AE" KeyPath="yes" Source="$(var.AppProjectDir)\DRG.Core.dll" />
+            </Component>
+            
+            <Component Id="cmp296B2A5D351440304F288689218609BC" Guid="*">
+                <File Id="filE6C7B8FF5C724156734DF8792E00BE3E" KeyPath="yes" Source="$(var.AppProjectDir)\DRG.DefinitionsParser.dll" />
+            </Component>
+            
+            <Component Id="cmp5A1A447F109CE505BB3BD4F673257F72" Guid="*">
+                <File Id="fil62BEB24F8D2090CD7D7740BB9FC37CBA" KeyPath="yes" Source="$(var.AppProjectDir)\DRG.dll" />
+            </Component>
+            
+            <Component Id="cmp1874AB219070404EED322213C6A1A49E" Guid="*">
+                <File Id="fil05FF769999D602AD4FA6A489C44ED290" KeyPath="yes" Source="$(var.AppProjectDir)\Newtonsoft.Json.dll" />
+            </Component>
+            <Component Id="cmp03F5503D497D187BDDF7D932D5BD55E9" Guid="*">
+                <File Id="fil094941A1CF7BE1998B69C59AF0F5D834" KeyPath="yes" Source="$(var.AppProjectDir)\Newtonsoft.Json.xml" />
+            </Component>
+            <Directory Id="dir387AB1E78D22EEAAD61EE29090BDBC2E" Name="Data">
+                <Component Id="cmpD0B45C9E472CB3D909BE4BB61862D7F7" Guid="*">
+                    <File Id="filA13DDDED316685A2531981090C85CA14" KeyPath="yes" Source="$(var.AppProjectDir)\Data\DefinitionData.json" />
+                </Component>
+                <Component Id="cmp01A372D8D1C81D9B86ECE7A41F86DC7A" Guid="*">
+                    <File Id="fil281A10F2EBF84480A7D184328EB2643B" KeyPath="yes" Source="$(var.AppProjectDir)\Data\DefinitionData.xlsx" />
+                </Component>
+                <Component Id="cmp8ACF5EBD2AA4FED408E9EEAD56A75490" Guid="*">
+                    <File Id="fil924ECCCE8F8F55CEAEE7A21A415A77B4" KeyPath="yes" Source="$(var.AppProjectDir)\Data\DefinitionData_STG.xlsx" />
+                </Component>
+                <Component Id="cmpEBA04E33D4C7A759388ECFBCE28C61DE" Guid="*">
+                    <File Id="filF1556CBE4F942692DF297A83B0D5A2FE" KeyPath="yes" Source="$(var.AppProjectDir)\Data\TestDataFull.csv" />
+                </Component>
+            </Directory>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="Wix.Generated_Project">
+            <ComponentRef Id="cmp370F0A754FB44AE2F9063D9D0098D5FC" />
+            <ComponentRef Id="cmp364868FE3B4245B8EBE4C3511C86F0FA" />
+            
+            <ComponentRef Id="cmp8048AEC798671FB7AEE279D1DB9B883C" />
+            
+            <ComponentRef Id="cmp296B2A5D351440304F288689218609BC" />
+            
+            <ComponentRef Id="cmp5A1A447F109CE505BB3BD4F673257F72" />
+            
+            <ComponentRef Id="cmp1874AB219070404EED322213C6A1A49E" />
+            <ComponentRef Id="cmp03F5503D497D187BDDF7D932D5BD55E9" />
+            <ComponentRef Id="cmpD0B45C9E472CB3D909BE4BB61862D7F7" />
+            <ComponentRef Id="cmp01A372D8D1C81D9B86ECE7A41F86DC7A" />
+            <ComponentRef Id="cmp8ACF5EBD2AA4FED408E9EEAD56A75490" />
+            <ComponentRef Id="cmpEBA04E33D4C7A759388ECFBCE28C61DE" />
+        </ComponentGroup>
+    </Fragment>
+</Wix>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{a370b173-2bdf-42b4-a6da-8353f2790810}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>DRG Architecture</Name>
+    <RootNamespace>DRG Architecture</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ItemGroup>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\DRG Architecture.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DRG.ConsoleApplication\DRG.ConsoleApplication.csproj">
+      <Name>DRG.ConsoleApplication</Name>
+      <Project>{5ac947dd-260e-4971-bcd9-3bb1bee2677c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\DRG.Core\DRG.Core.csproj">
+      <Name>DRG.Core</Name>
+      <Project>{abade5d4-3b3e-46de-891e-11b4d2267ef2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\DRG\DRG.csproj">
+      <Name>DRG</Name>
+      <Project>{6cf7202b-3993-4c10-97cf-28b8fce949a3}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Validate Include="Drg.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="Drg.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Drg.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="Drg.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>Drg.layerdiagram</DependentUpon>
+    </Validate>
+  </ItemGroup>
+</Project>

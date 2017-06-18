@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>DRG</id>
+    <version>$version$</version>
+    <title>DRG Install</title>
+    <authors>Helsedirektoratet</authors>
+    <owners>Helsedirektoratet</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>DRG grouper</description>
+    <copyright>Copyright 2016</copyright>
+    <dependencies>
+      <group targetFramework="net451">
+          <dependency id="Newtonsoft.Json" />
+      </group>
+  </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\x64\release\*.dll" target="lib\net451" />
+  </files>
+  
+</package>

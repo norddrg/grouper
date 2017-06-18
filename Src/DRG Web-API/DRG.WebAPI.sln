@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.25618.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DRG.WebAPI", "DRG.WebAPI\DRG.WebAPI.csproj", "{A706EB9E-5F78-41FC-B6C1-B9DC1A7627FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DRG.WebAPI.Tests", "DRG.WebAPI.Tests\DRG.WebAPI.Tests.csproj", "{97F8334D-FF17-4F2E-8405-CD9BC1F99486}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "drgDll", "drgDll", "{2CC624CA-0627-407C-9CD6-A6D971198AC6}"
+	ProjectSection(SolutionItems) = preProject
+		drg.dll\DRG.Core.dll = drg.dll\DRG.Core.dll
+		drg.dll\DRG.DefinitionsParser.dll = drg.dll\DRG.DefinitionsParser.dll
+		drg.dll\DRG.dll = drg.dll\DRG.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{841EB0E2-28DD-4DF0-BFE9-5E7594704E90}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A706EB9E-5F78-41FC-B6C1-B9DC1A7627FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A706EB9E-5F78-41FC-B6C1-B9DC1A7627FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A706EB9E-5F78-41FC-B6C1-B9DC1A7627FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A706EB9E-5F78-41FC-B6C1-B9DC1A7627FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97F8334D-FF17-4F2E-8405-CD9BC1F99486}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97F8334D-FF17-4F2E-8405-CD9BC1F99486}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97F8334D-FF17-4F2E-8405-CD9BC1F99486}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97F8334D-FF17-4F2E-8405-CD9BC1F99486}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.helsedirektoratet.no/tfs/helsedirektoratet
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DRG.WebAPI.Tests\\DRG.WebAPI.Tests.csproj
+		SccProjectName1 = DRG.WebAPI.Tests
+		SccLocalPath1 = DRG.WebAPI.Tests
+		SccProjectUniqueName2 = DRG.WebAPI\\DRG.WebAPI.csproj
+		SccProjectName2 = DRG.WebAPI
+		SccLocalPath2 = DRG.WebAPI
+	EndGlobalSection
+EndGlobal

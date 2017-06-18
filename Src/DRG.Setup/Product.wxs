@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+  
+  <?include def.wxi?>
+ 
+  
+	<Product Id="*" 
+           Name="!(loc.ProductName)" 
+           Language="!(loc.LANG)" 
+           Version="$(var.Version)" 
+           Manufacturer="!(loc.CompanyName)" 
+           UpgradeCode="$(var.UpgradeCode)">
+    
+    
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" 
+             Languages="!(loc.LANG)"
+						 Manufacturer="!(loc.CompanyName)" Comments="!(loc.Comments)"
+						 Description="!(loc.Description)" Keywords="!(loc.Keywords)" />
+
+    <?include Settings.wxi ?>
+    
+    <?include Conditions.wxi ?>
+
+    <MediaTemplate EmbedCab="yes" />
+
+    <Feature Id="ProductFeature" Title="!(loc.ProductName)" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+      <ComponentGroupRef Id="Wix.Generated_Project" />
+      <ComponentGroupRef Id="DataComponents"/>
+    </Feature>
+
+    <UIRef Id="WixUI_InstallDir_Inmeta" />
+    
+	</Product>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFiles64Folder">
+        <Directory Id="CompanyFolder" Name="!(loc.ProgramFolderName)">
+          <Directory Id="INSTALLDIR" Name="!(loc.ProductName)">
+            <Directory Id="DATADIR" Name="!(loc.Data)">
+            </Directory>
+            </Directory>
+          </Directory>
+        </Directory>
+      </Directory>
+  </Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLDIR">
+			<!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
+			<!-- <Component Id="ProductComponent"> -->
+				<!-- TODO: Insert files, registry keys, and other resources here. -->
+			<!-- </Component> -->
+		</ComponentGroup>
+	</Fragment>
+<Fragment>
+  <ComponentGroup Id="DataComponents" Directory="DATADIR">
+    <Component Id="COMPID" Guid="{36091762-2E2D-492C-8D39-AA96F6165827}">
+      <CreateFolder Directory="DATADIR">
+          <util:PermissionEx User="Everyone" GenericAll="yes" />
+      </CreateFolder>
+    </Component>
+  </ComponentGroup>
+</Fragment>
+</Wix>
